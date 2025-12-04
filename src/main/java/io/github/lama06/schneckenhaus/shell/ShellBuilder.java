@@ -125,12 +125,19 @@ public abstract class ShellBuilder extends ConstantsHolder implements ShellData 
             owner = creator;
         }
 
-        if (enterPermissionMode == null) {
+        /*if (enterPermissionMode == null) {
             enterPermissionMode = ShellPermissionMode.EVERYBODY;
         }
 
         if (buildPermissionMode == null) {
             buildPermissionMode = ShellPermissionMode.EVERYBODY;
+        }*/
+        if (enterPermissionMode == null) {
+            enterPermissionMode = plugin.getPluginConfig().getDefaultEnterPermissionMode();
+        }
+
+        if (buildPermissionMode == null) {
+            buildPermissionMode = plugin.getPluginConfig().getDefaultBuildPermissionMode();
         }
 
         String insertSql = """
