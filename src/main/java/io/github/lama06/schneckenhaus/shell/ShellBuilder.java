@@ -125,13 +125,6 @@ public abstract class ShellBuilder extends ConstantsHolder implements ShellData 
             owner = creator;
         }
 
-        /*if (enterPermissionMode == null) {
-            enterPermissionMode = ShellPermissionMode.EVERYBODY;
-        }
-
-        if (buildPermissionMode == null) {
-            buildPermissionMode = ShellPermissionMode.EVERYBODY;
-        }*/
         if (enterPermissionMode == null) {
             enterPermissionMode = plugin.getPluginConfig().getDefaultEnterPermissionMode();
         }
